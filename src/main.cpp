@@ -288,7 +288,9 @@ void loop()
       display.print(":");
       display.print(to2digits(watering1[2]));
 
-      display.setCursor(17, 57);
+      display.setCursor(8, 57);
+      display.print(to2digits(watering_pumptime1[0]));
+      display.print(":");
       display.print(to2digits(watering_pumptime1[1]));
       display.print(":");
       display.print(to2digits(watering_pumptime1[2]));
@@ -300,7 +302,9 @@ void loop()
       display.print(":");
       display.print(to2digits(watering2[2]));
 
-      display.setCursor(82, 57);
+      display.setCursor(73, 57);
+      display.print(to2digits(watering_pumptime2[0]));
+      display.print(":");
       display.print(to2digits(watering_pumptime2[1]));
       display.print(":");
       display.print(to2digits(watering_pumptime2[2]));
