@@ -21,7 +21,7 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
-// Set pins:  CE,IO,CLK
+// Set pins:  CE(RST),IO(DAT),CLK
 DS1302RTC RTC(8, 7, 6);
 
 // sets relay to pin
