@@ -165,6 +165,7 @@ void showTime(int x, int y, tmElements_t timeElem){
   display.print(to2digits(timeElem.Minute));
   display.print(":");
   display.print(to2digits(timeElem.Second));
+  //Serial.print(timeElem.Hour);Serial.print(timeElem.Minute);Serial.println(timeElem.Second);
 }
 
 //time_t timeToTimestamp(tmElements_t actualTime, int hmsStartArray[], int hmsStopArray[] = {false})
