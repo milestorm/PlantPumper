@@ -44,7 +44,7 @@ int watering_pumptime1[3] = {0, 0, 40}; // for how long water (hh:mm:ss)
 
 // Pump 2
 int watering2[3] = {19, 0, 0}; // when to foce water (hh:mm:ss)
-int watering_pumptime2[3] = {0, 0, 25}; // for how long water (hh:mm:ss)
+int watering_pumptime2[3] = {0, 0, 40}; // for how long water (hh:mm:ss)
 
 time_t displayOnTime = 15; // display informations for x seconds
 time_t displayTimestamp = 0;
