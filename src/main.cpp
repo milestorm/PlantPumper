@@ -40,11 +40,11 @@ Adafruit_SSD1306 display(OLED_RESET);
 /* SETS VARIABLES WHEN TO WATER PLANTS */
 // Pump 1
 int watering1[3] = {19, 0, 0}; // when to foce water (hh:mm:ss)
-int watering_pumptime1[3] = {0, 0, 58}; // for how long water (hh:mm:ss)
+int watering_pumptime1[3] = {0, 0, 30}; // for how long water (hh:mm:ss)
 
 // Pump 2
 int watering2[3] = {19, 0, 0}; // when to foce water (hh:mm:ss)
-int watering_pumptime2[3] = {0, 0, 58}; // for how long water (hh:mm:ss)
+int watering_pumptime2[3] = {0, 0, 30}; // for how long water (hh:mm:ss)
 
 time_t displayOnTime = 15; // display informations for x seconds
 time_t displayTimestamp = 0;
@@ -224,8 +224,9 @@ void setup()
   display.println("PLANT");
   display.println("PUMPER");
   display.setTextSize(1);
-  display.print("v0.4");
+  display.print("v0.5");
   display.display();
+  Serial.println("Plant pumper");
   delay(1000);
   display.clearDisplay();
   display.display();
@@ -242,11 +243,11 @@ void setup()
 
   // sets time manually (you must set it first)
   if (TIMESET) {
-    tm.Year = CalendarYrToTm(2017);
-    tm.Month = 6;
-    tm.Day = 14;
-    tm.Hour = 21;
-    tm.Minute = 10;
+    tm.Year = CalendarYrToTm(2019);
+    tm.Month = 7;
+    tm.Day = 2;
+    tm.Hour = 18;
+    tm.Minute = 02;
     tm.Second = 0;
     t = makeTime(tm);
     if (RTC.set(t) == 0) {
@@ -258,6 +259,11 @@ void setup()
     displayTimestamp = makeTime(tm) + displayOnTime; // sets stopping point for display show time
     Serial.print("displayTimestamp ");
     Serial.println(displayTimestamp);
+    Serial.print(tm.Hour);
+    Serial.print(":");
+    Serial.print(tm.Minute);
+    Serial.print(":");
+    Serial.println(tm.Second);
   }
 }
 
